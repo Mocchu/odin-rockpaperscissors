@@ -8,8 +8,7 @@ function playRound(playerSelection, computerSelection) {
 
 	if (!choices.includes(playerSelection)) {
 		return "Invalid input!";
-	}
-	if (
+	} else if (
 		(playerSelection === "rock" && computerSelection === "paper") ||
 		(playerSelection === "paper" && computerSelection === "scissors") ||
 		(playerSelection === "scissors" && computerSelection === "rock")
