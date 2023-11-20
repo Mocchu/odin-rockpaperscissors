@@ -175,7 +175,7 @@ footer {
 }
 
 button {
-	background-color: rgb(21, 134, 123);
+	background-color: rgba(21, 134, 123, 0.6);
 	color: white;
 	border: none;
 	padding: 0.5rem;
@@ -185,6 +185,10 @@ button {
 button:hover {
 	cursor: pointer;
 	background-color: rgba(21, 134, 123, 0.8);
+}
+
+button:active:hover {
+	background-color: rgba(21, 134, 123, 1);
 }
 
 /* RESULTS */
