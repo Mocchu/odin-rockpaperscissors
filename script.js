@@ -1,7 +1,7 @@
 const CHOICES = ["rock", "paper", "scissors"];
 const buttons = document.querySelector(".buttons");
 const rockBtn = document.querySelector(".rock");
-const paperBtn = document.querySelector(".scissors");
+const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 
 const playerScoreP = document.querySelector(".player-score");
