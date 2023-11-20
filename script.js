@@ -44,12 +44,12 @@ function playRound(playerSelection, computerSelection) {
 	playerSelection = playerSelection.toUpperCase();
 
 	if (
-		(playerSelection === "rock" && computerSelection === "paper") ||
-		(playerSelection === "paper" && computerSelection === "scissors") ||
-		(playerSelection === "scissors" && computerSelection === "rock")
+		(playerSelection === "ROCK" && computerSelection === "PAPER") ||
+		(playerSelection === "PAPER" && computerSelection === "SCISSORS") ||
+		(playerSelection === "SCISSORS" && computerSelection === "ROCK")
 	) {
 		computerScore++;
-		return `You lose! ${computerSelection} beats ${playerSelection}`;
+		return `You lose!\n ${computerSelection} beats ${playerSelection}`;
 	} else if (playerSelection === computerSelection) {
 		return "It's a tie!";
 	} else {
