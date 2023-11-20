@@ -1,4 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* 
+   CSS RESET 
+   http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -128,18 +130,32 @@ table {
 	border-spacing: 0;
 }
 
-/* CSS START */
+/* === MY CSS === */
+/* CORE */
+:root {
+	--bg-color: #121212;
+	--text-color: rgba(255, 255, 255, 80%);
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+/* REUSABLE */
 .flex {
 	display: flex;
 }
 
 .container {
-	height: 97vh;
+	height: 80vh;
 	flex-direction: column;
 }
 
+/* MAIN */
 .title {
-	padding: 1rem;
+	padding: 3rem;
 	font-weight: bold;
 	font-size: 2em;
 	font-weight: 700;
@@ -156,9 +172,20 @@ footer {
 	gap: 1rem;
 }
 
+button {
+	background-color: rgb(14, 99, 90);
+	color: var(--text-color);
+	border: none;
+	padding: 0.5rem;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
 .scores {
 	justify-content: space-evenly;
-	width: 15%;
+	width: 30vh;
 	padding-top: 2rem;
 	gap: 1rem;
 }
@@ -175,4 +202,22 @@ footer {
 	align-items: center;
 	text-align: center;
 	gap: 1rem;
+}
+
+.winner {
+	padding-top: 3rem;
+}
+
+footer {
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+footer > * {
+	color: rgba(255, 255, 255, 30%);
+}
+
+.footer-p-2 {
+	opacity: 60%;
+	font-size: 0.9em;
 }

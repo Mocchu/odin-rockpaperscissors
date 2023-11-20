@@ -7,12 +7,14 @@ const scissorsBtn = document.querySelector(".scissors");
 const playerScoreP = document.querySelector(".player-score");
 const computerScoreP = document.querySelector(".computer-score");
 const resultP = document.querySelector(".result");
+const winnerP = document.querySelector(".winner");
 
 let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
 getComputerChoice = () => CHOICES[Math.floor(Math.random() * CHOICES.length)];
+resetScores = () => ([playerScore, computerScore] = [0, 0]);
 
 buttons.addEventListener("click", (e) => {
 	// Plays the game and display outcome on player selection
@@ -27,13 +29,28 @@ buttons.addEventListener("click", (e) => {
 			playerSelection = "scissors";
 			break;
 	}
+	updateOutcomes();
+});
+
+function updateOutcomes() {
+	// Modifies the DOM to reflect round result and current scores
+	if (playerScore === 0 && computerScore === 0) winnerP.textContent = "";
+
 	resultP.textContent = playRound(
 		playerSelection,
 		(computerSelection = getComputerChoice())
 	);
 	playerScoreP.textContent = playerScore;
 	computerScoreP.textContent = computerScore;
-});
+
+	if (playerScore === 5) {
+		winnerP.textContent = "😊 You won the game! 😊";
+		resetScores();
+	} else if (computerScore === 5) {
+		winnerP.textContent = "☹️ You lost the game! ☹️";
+		resetScores();
+	}
+}
 
 function playRound(playerSelection, computerSelection) {
 	// Returns output of round (str) and updates score variables
