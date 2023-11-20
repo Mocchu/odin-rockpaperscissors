@@ -150,6 +150,7 @@ body {
 
 .container {
 	flex-direction: column;
+	height: 70vh;
 }
 
 /* MAIN */
