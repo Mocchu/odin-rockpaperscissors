@@ -49,7 +49,7 @@ function playRound(playerSelection, computerSelection) {
 		(playerSelection === "SCISSORS" && computerSelection === "ROCK")
 	) {
 		computerScore++;
-		return `You lose!\n ${computerSelection} beats ${playerSelection}`;
+		return `You lose! ${computerSelection} beats ${playerSelection}`;
 	} else if (playerSelection === computerSelection) {
 		return "It's a tie!";
 	} else {
