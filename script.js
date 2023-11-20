@@ -18,17 +18,7 @@ resetScores = () => ([playerScore, computerScore] = [0, 0]);
 
 buttons.addEventListener("click", (e) => {
 	// Plays the game and display outcome on player selection
-	switch (e.target.className) {
-		case "rock":
-			playerSelection = "rock";
-			break;
-		case "paper":
-			playerSelection = "paper";
-			break;
-		case "scissors":
-			playerSelection = "scissors";
-			break;
-	}
+	playerSelection = e.target.className;
 	updateOutcomes();
 });
 
