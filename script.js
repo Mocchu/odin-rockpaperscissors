@@ -1,4 +1,4 @@
-const CHOICES = ["rock", "paper", "scissors"];
+const CHOICES = ["ROCK", "PAPER", "SCISSORS"];
 const buttons = document.querySelector(".buttons");
 const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
@@ -26,17 +26,14 @@ function updateOutcomes() {
 	// Modifies the DOM to reflect round result and current scores
 	if (playerScore === 0 && computerScore === 0) winnerP.textContent = "";
 
-	resultP.textContent = playRound(
-		playerSelection,
-		(computerSelection = getComputerChoice())
-	);
+	resultP.textContent = playRound(playerSelection, getComputerChoice());
 	playerScoreP.textContent = playerScore;
 	computerScoreP.textContent = computerScore;
 
-	if (playerScore === 5) {
+	if (playerScore === 4) {
 		winnerP.textContent = "😊 You won the game! 😊";
 		resetScores();
-	} else if (computerScore === 5) {
+	} else if (computerScore === 4) {
 		winnerP.textContent = "☹️ You lost the game! ☹️";
 		resetScores();
 	}
@@ -44,7 +41,7 @@ function updateOutcomes() {
 
 function playRound(playerSelection, computerSelection) {
 	// Returns output of round (str) and updates score variables
-	playerSelection = playerSelection.toLowerCase();
+	playerSelection = playerSelection.toUpperCase();
 
 	if (
 		(playerSelection === "rock" && computerSelection === "paper") ||
