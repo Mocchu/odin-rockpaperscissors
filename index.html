@@ -5,16 +5,44 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rock Paper Scissors</title>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Open+Sans:wght@300;400;500;700;800&display=swap"
+			rel="stylesheet"
+		/>
 		<script src="awesome_script.js" defer></script>
 	</head>
-	<body>
+	<body
+		style="
+			font-family: 'Montserrat', sans-serif;
+			font-family: 'Open Sans', sans-serif;
+		"
+	>
 		<div class="container flex">
 			<h1 class="title flex">Rock Paper Scissors</h1>
 			<div class="buttons flex">
-				<button>Rock</button>
-				<button>Paper</button>
-				<button>Scissors</button>
+				<button class="rock">Rock</button>
+				<button class="paper">Paper</button>
+				<button class="scissors">Scissors</button>
+			</div>
+			<div class="scores flex">
+				<div class="player flex">
+					<p class="player-score">0</p>
+					<p class="player-label">You</p>
+				</div>
+				<div class="result-div flex">
+					<p class="result">Select an option to start the game!</p>
+				</div>
+
+				<div class="computer flex">
+					<p class="computer-score">0</p>
+					<p class="computer-label">CPU</p>
+				</div>
 			</div>
 		</div>
+		<footer class="flex">
+			<p>Mochi 2023</p>
+		</footer>
 	</body>
 </html>

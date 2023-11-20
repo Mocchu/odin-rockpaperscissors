@@ -1,4 +1,5 @@
 # odin-rockpaperscissors
-Foundations Course - Project: Rock Paper Scissors 
 
-Console implmentation only.
+The Odin Project - HTML + CSS Project 3
+
+Simple rock paper scissors javascript game
