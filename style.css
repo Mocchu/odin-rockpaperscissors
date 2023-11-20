@@ -160,6 +160,7 @@ body {
 	font-size: 2em;
 	font-weight: 700;
 	color: white;
+	text-align: center;
 }
 
 .container,
@@ -174,7 +175,7 @@ footer {
 }
 
 button {
-	background-color: rgb(14, 99, 90);
+	background-color: rgb(21, 134, 123);
 	color: white;
 	border: none;
 	padding: 0.5rem;
@@ -183,9 +184,10 @@ button {
 
 button:hover {
 	cursor: pointer;
-	background-color: rgba(14, 99, 90, 0.8);
+	background-color: rgba(21, 134, 123, 0.8);
 }
 
+/* RESULTS */
 .scores {
 	justify-content: space-evenly;
 	width: 30vh;
@@ -211,6 +213,7 @@ button:hover {
 	padding-top: 3rem;
 }
 
+/* FOOTER */
 footer {
 	flex-direction: column;
 	gap: 0.5rem;
@@ -223,4 +226,5 @@ footer > * {
 .footer-p-2 {
 	opacity: 60%;
 	font-size: 0.9em;
+	text-align: center;
 }
