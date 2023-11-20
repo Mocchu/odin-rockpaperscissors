@@ -149,7 +149,6 @@ body {
 }
 
 .container {
-	height: 80vh;
 	flex-direction: column;
 }
 
@@ -174,9 +173,10 @@ footer {
 
 button {
 	background-color: rgb(14, 99, 90);
-	color: var(--text-color);
+	color: white;
 	border: none;
 	padding: 0.5rem;
+	font-size: 2em;
 }
 
 button:hover {
