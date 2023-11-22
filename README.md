@@ -1,4 +1,4 @@
-# odin-rockpaperscissors
+# rockpaperscissors
 
 The Odin Project - Project 2.5
 
